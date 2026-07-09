@@ -30,6 +30,6 @@ Click anywhere on the text card or press any key to begin. The timer starts on y
 
 ## Developed by
 
-[sumeet](https://github.com/Soul2x)
+[Sumeet](https://github.com/Soul2x)
 # typespeed
 # typespeed
