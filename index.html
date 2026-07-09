@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeSpeed — by Sumeet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-brand">Type<span>Speed</span></div>
+    <div class="nav-meta">by Sumeet</div>
+  </nav>
+
+  <main>
+
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-value" id="stat-wpm">0</div>
+        <div class="stat-label">WPM</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-value" id="stat-acc">—</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="time-ring-wrap">
+        <svg class="time-ring-svg" width="52" height="52" viewBox="0 0 52 52">
+          <circle class="time-ring-track" cx="26" cy="26" r="22"/>
+          <circle class="time-ring-fill" id="ring-fill" cx="26" cy="26" r="22"
+            stroke-dasharray="138.2" stroke-dashoffset="0"/>
+        </svg>
+        <div class="time-ring-label" id="stat-time">30</div>
+      </div>
+    </div>
+
+    <div class="mode-selector" id="mode-selector">
+      <button class="mode-btn" data-time="15">15s</button>
+      <button class="mode-btn active" data-time="30">30s</button>
+      <button class="mode-btn" data-time="60">60s</button>
+      <button class="mode-btn" data-time="120">120s</button>
+    </div>
+
+    <div class="typing-container" id="typing-container">
+      <div class="typing-card" id="typing-card">
+        <div class="text-viewport">
+          <div class="text-display" id="text-display"></div>
+        </div>
+        <input id="hidden-input" type="text" autocomplete="off"
+               autocorrect="off" autocapitalize="off" spellcheck="false" />
+        <div class="overlay" id="idle-overlay">
+          <div class="overlay-label">Click or press any key to start</div>
+          <div class="overlay-hint" id="idle-hint">30 seconds — English words</div>
+        </div>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="result-panel" id="result-panel">
+      <div class="result-grid">
+        <div class="result-card highlight">
+          <div class="rc-value" id="res-wpm">0</div>
+          <div class="rc-label">WPM</div>
+        </div>
+        <div class="result-card">
+          <div class="rc-value" id="res-acc">0%</div>
+          <div class="rc-label">Accuracy</div>
+        </div>
+        <div class="result-card">
+          <div class="rc-value" id="res-chars">0</div>
+          <div class="rc-label">Characters</div>
+        </div>
+        <div class="result-card">
+          <div class="rc-value" id="res-errors">0</div>
+          <div class="rc-label">Errors</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn primary" id="restart-btn">Try Again</button>
+        <button class="btn" id="new-text-btn">New Text</button>
+      </div>
+    </div>
+
+    <div class="controls" id="idle-controls">
+      <button class="btn" id="reset-btn">Reset</button>
+    </div>
+
+  </main>
+
+  <footer>TypeSpeed &mdash; <span>Sumeet</span> &mdash; Minimal typing practice</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
